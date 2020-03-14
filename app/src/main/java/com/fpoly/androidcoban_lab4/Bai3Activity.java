@@ -18,15 +18,15 @@ public class Bai3Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bai3);
-
-        btnContextMenu= findViewById(R.id.btnContextMenu);
-
+        btnContextMenu = findViewById(R.id.btnContextMenu);
         registerForContextMenu(btnContextMenu);
     }
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         getMenuInflater().inflate(R.menu.context_menu, menu);
+        menu.setHeaderTitle("Title");
+        menu.setHeaderIcon(R.mipmap.ic_launcher);
         super.onCreateContextMenu(menu, v, menuInfo);
     }
 
